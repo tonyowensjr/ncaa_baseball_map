@@ -1,0 +1,8 @@
+# ignore all testing files
+*.ipynb
+
+# ignore the game data
+game_data/
+
+# ignore the vscode settings
+*.vscode/
