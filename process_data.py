@@ -158,7 +158,7 @@ def main():
     data[['latitude', 'longitude']] = pd.DataFrame(data['coords'].tolist(), index=data.index)
     
     # Save the data
-    data[['latitude','longitude','info']].drop_duplicates().to_csv(f'game_data/cleaned_df_{year}.csv')
+    data.sort_values(by = 'date')[['latitude','longitude','info']].drop_duplicates().to_csv(f'game_data/cleaned_df_{year}.csv')
 
 if __name__ == "__main__":
     main()
